@@ -1,0 +1,54 @@
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    text-align: center;
+}
+
+th {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+th img {
+    margin-top: 10px; 
+    border-radius: 5px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+table tr:hover {
+    background-color: #e6f7ff; 
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+    font-style: italic;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#image-display {
+    text-align: center;
+    margin-top: 20px;
+}
+img {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ol {
+    text-align: center;
+    list-style-position: inside;
+}
