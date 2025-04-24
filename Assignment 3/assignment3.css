@@ -1,0 +1,39 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(237, 134, 17);
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+
+nav a:hover {
+    transform: translateY(-0.25em);
+    color: rgb(237, 134, 17);
+    background-color: #fff;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  canvas {
+    display: block;
+  }
