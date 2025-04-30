@@ -1,0 +1,21 @@
+/*
+ * Custom CSS
+ */
+
+:root {
+  --bs-body-bg: var(--bs-gray-100);
+}
+
+.album {
+  padding: 2rem 0;
+}
+
+.album {
+  padding: 2rem 0;
+}
+.card-section {
+  display: none;
+}
+.card-section.active {
+  display: block;
+}

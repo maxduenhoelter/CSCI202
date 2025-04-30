@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bellingham Arboretum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" href="styles.css">
+    <style>
+      .album {
+        padding: 2rem 0;
+      }
+      .card-section {
+        display: none;
+      }
+      .card-section.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="p-3 text-center bg-dark text-white">
+      <div class="container">
+        <h1 class="fw-light">Bellingham Arboretum Landmarks</h1>
+        <p class="lead">Choose a vibe to reveal your destination!</p>
+        <div class="d-flex justify-content-center gap-3">
+          <button class="btn btn-info" onclick="showCard('view')">Nice View</button>
+          <button class="btn btn-warning" onclick="showCard('adventurous')">Adventurous</button>
+          <button class="btn btn-secondary" onclick="showCard('spooky')">Spooky Vibe</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="album py-5 bg-light">
+        <div class="container">
+
+          <!-- Tower Card -->
+          <div id="view" class="card-section active">
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="card shadow-sm mb-4">
+                  <img src="images/arb tower.jpeg" class="card-img-top" alt="Arb Tower">
+                  <div class="card-body">
+                    <h5 class="card-title">Observation Tower</h5>
+                    <p class="card-text">An 80-foot wooden tower offering panoramic views!</p>
+                    <div class="d-flex gap-2">
+                      <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="collapse" data-bs-target="#tower-info">More info</button>
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#tower-map">Show Map</button>
+                    </div>
+                    <div class="collapse mt-2" id="tower-info">
+                      <p class="mb-1">Hike Length: 1.2 miles round trip</p>
+                      <p class="mb-0">Elevation: 380 feet</p>
+                    </div>
+                    <div class="collapse mt-2" id="tower-map">
+                      <img src="images/arb-map.jpg" class="img-fluid rounded border" alt="Arboretum Map">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Climbing Wall Card -->
+          <div id="adventurous" class="card-section">
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="card shadow-sm mb-4">
+                  <img src="images/arb climbing wall.jpg" class="card-img-top" alt="Climbing Wall">
+                  <div class="card-body">
+                    <h5 class="card-title">Climbing Wall</h5>
+                    <p class="card-text">A WWU classic outdoor climbing destination.</p>
+                    <div class="d-flex gap-2">
+                      <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="collapse" data-bs-target="#wall-info">More info</button>
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#wall-map">Show Map</button>
+                    </div>
+                    <div class="collapse mt-2" id="wall-info">
+                      <p class="mb-1">Hike Length: 0.8 miles round trip</p>
+                      <p class="mb-0">Elevation: 310 feet</p>
+                    </div>
+                    <div class="collapse mt-2" id="wall-map">
+                      <img src="images/arb-map.jpg" class="img-fluid rounded border" alt="Arboretum Map">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tunnel Card -->
+          <div id="spooky" class="card-section">
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="card shadow-sm mb-4">
+                  <img src="images/arb tunnel.jpg" class="card-img-top" alt="Arb Tunnel">
+                  <div class="card-body">
+                    <h5 class="card-title">Huntoon Tunnel</h5>
+                    <p class="card-text">A tunnel blasted from sandstone, once used for car traffic.</p>
+                    <div class="d-flex gap-2">
+                      <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="collapse" data-bs-target="#tunnel-info">More info</button>
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#tunnel-map">Show Map</button>
+                    </div>
+                    <div class="collapse mt-2" id="tunnel-info">
+                      <p class="mb-1">Hike Length: 0.5 miles round trip</p>
+                      <p class="mb-0">Elevation: 295 feet</p>
+                    </div>
+                    <div class="collapse mt-2" id="tunnel-map">
+                      <img src="images/arb-map.jpg" class="img-fluid rounded border" alt="Arboretum Map">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function showCard(id) {
+        const sections = document.querySelectorAll('.card-section');
+        sections.forEach(section => section.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
