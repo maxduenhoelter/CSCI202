@@ -1,33 +1,31 @@
 @font-face {
   font-family: 'MyCustomFont';
-  src: url('fonts/Super Boys.woff') format('woff'),
-       url('Super Boys.ttf') format('truetype');
+  src: url('fonts/Super Boys.woff') format('woff'), url('Super Boys.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'MyCustomFont2';
-  src: url('fonts/MoreSugars.woff') format('woff'),
-       url('MoreSugar.ttf') format('truetype');
+  src: url('fonts/MoreSugars.woff') format('woff'), url('MoreSugar.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  background-image: url('floral.png'); /* Replace with your actual image file name */
-  background-size: cover; /* Ensures it fills the entire screen */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents tiling */
+  background-image: url('floral.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
-  margin-top: 100px; /* Adjust based on header height */
-  font-family: 'MyCustomFont', sans-serif; /* Fallback to sans-serif if font doesn't load */
+  margin-top: 100px;
+  font-family: 'MyCustomFont', sans-serif;
 }
 
 /* Main header */
 h3 {
-  font-size: 32px;
-  color: #000000; /* Sweet As Waffles color */
+  font-size: 2rem;
+  color: #000000;
   font-weight: bold;
 }
 
@@ -35,87 +33,15 @@ h3 {
 #main-logo {
   display: block;
   margin: 0 auto;
-  width: 200px;
+  width: 150px;
+  max-width: 80%;
 }
 
 /* Chat container */
 .chat-container {
   position: relative;
-  width: 70%;
-  margin: 20px auto;
-  background-color: #f1ead1;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Chatbox */
-textarea {
-font-family: 'MyCustomFont2', sans-serif; /* Apply custom font */
-  width: 100%;
-  height: 300px;
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 2px solid #000000;
-}
-
-textarea, input[type="text"] {
-    autocomplete: off;
-    -webkit-text-fill-color: inherit; /* Helps prevent autofill styling */
-}
-
-input[type="text"] {
-  font-family: 'MyCustomFont2', sans-serif; /* Apply custom font */
-  font-size: 16px;
-  width: 24%; /* Makes it match the chatbox width */
-  padding: 8px;
-  border-radius: 5px;
-  border: 2px solid #000000;
-  text-align: center;
-  margin-right: 3px;
-}
-
-
-.button-container {
-  margin-top: 15px; /* Adds space between the text box and buttons */
-  display: flex;
-  gap: 20px; /* Adds spacing between the buttons */
-  justify-content: center; /* Centers buttons horizontally */
-}
-
-input[type="submit"], input[type="reset"] {
-  font-family: 'MyCustomFont', sans-serif;
-  font-size: 16px;
-  background-color: #000000;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100px; /* Set fixed width */
-  height: 44px;
-  text-align: center;
-}
-
-
-input[type="submit"]:hover, input[type="reset"]:hover {
-    background-color: #71f4ed;
-}
-
-input[type="submit"] {
-  margin-right: 3x; /* Adds spacing to the right */
-}
-
-input[type="reset"] {
-  margin-left: 3px; /* Adds spacing to the left */
-}
-
-/* Chat container styling */
-.chat-container {
-  position: relative;
-  z-index: 1;
-  width: 70%;
+  width: 90%;
+  max-width: 800px;
   margin: 20px auto;
   background-color: #ffffff;
   border-radius: 10px;
@@ -123,32 +49,99 @@ input[type="reset"] {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-#otter {
-  position: absolute;
-  right: 0px; /* Moves Otterlope to the right */
-  bottom: -30px; /* Aligns with the bottom of the chatbox */
-  width: 450px; /* Half the previous size */
-  height: auto; /* Maintain aspect ratio */
+/* Chatbox */
+textarea {
+  font-family: 'MyCustomFont2', sans-serif;
+  width: 100%;
+  height: 300px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #000000;
+  resize: vertical;
 }
 
-/* Black Border Around Navbar */
+textarea, input[type="text"] {
+  autocomplete: off;
+  -webkit-text-fill-color: inherit;
+}
+
+input[type="submit"] {
+  margin-left: 3x; /* Incorrect unit ('3x' should be '3px', but also unnecessary now) */
+}
+
+input[type="reset"] {
+  margin-left: 3px;
+}
+
+
+input[type="text"] {
+  font-family: 'MyCustomFont2', sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid #000000;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.button-container {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap; /* Allows stacking if space is tight */
+  justify-content: center;
+  margin-left: 30px;
+}
+
+
+input[type="submit"],
+input[type="reset"] {
+  font-family: 'MyCustomFont', sans-serif;
+  font-size: 1rem;
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 120px;
+  text-align: center;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #71f4ed;
+}
+
+#otter {
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+  width: 45%;
+  max-width: 300px;
+  height: auto;
+  z-index: 0;
+}
+
+/* Navbar */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100px;
-  background-color: #f7dcda; /* Sweet As Waffles' branding */
+  background-color: #f7dcda;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 9999;
-  padding: 0;
-  border-bottom: 3px solid black; /* Adds a black border */
+  padding: 0 10px;
+  border-bottom: 3px solid black;
+  box-sizing: border-box;
 }
 
-
-/* Navigation menu aligned left */
 .nav-menu {
   flex: 1;
 }
@@ -156,10 +149,12 @@ input[type="reset"] {
 .nav-menu ul {
   list-style: none;
   display: flex;
-  gap: 20px;
-  font-size: 14px;
-  padding-left: 20px; /* Aligns menu to the left */
-  font-weight: lighter;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 0.9rem;
+  padding-left: 20px;
+  margin: 0;
+  align-items: center;
 }
 
 .nav-menu a {
@@ -168,31 +163,61 @@ input[type="reset"] {
   font-weight: bold;
 }
 
-/* Ensure Sweet As Waffles Logo is Fully Centered */
+/* Logo */
 .logo-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 120px; /* Adjust size as needed */
+  width: 120px;
   height: auto;
 }
 
 .logo-container img {
-  width: 150px; /* Adjust size as needed */
+  width: 100%;
+  max-width: 150px;
+  height: auto;
 }
 
-/* Footer Container */
+/* Footer */
 .footer-container {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
-    text-align: center;
-    padding: 20px;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: 'MyCustomFont2', sans-serif;
-    border-top: 3px solid rgb(0, 0, 0);
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'MyCustomFont2', sans-serif;
+  border-top: 3px solid black;
 }
 
+/* Responsive Fixes */
+@media screen and (max-width: 768px) {
+  body {
+    margin-top: 120px;
+  }
 
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
 
+  .nav-menu ul {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .logo-container {
+    position: static;
+    transform: none;
+    margin: 10px 0;
+  }
+
+  #otter {
+    position: relative;
+    width: 80%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
