@@ -37,17 +37,17 @@ h3 {
   max-width: 80%;
 }
 
-/* Chat container */
 .chat-container {
   position: relative;
-  width: 90%;
-  max-width: 800px;
+  width: 70%;
   margin: 20px auto;
   background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 }
+
 
 /* Chatbox */
 textarea {
@@ -59,6 +59,7 @@ textarea {
   border-radius: 5px;
   border: 2px solid #000000;
   resize: vertical;
+  margin-right: 3x;
 }
 
 textarea, input[type="text"] {
@@ -117,12 +118,21 @@ input[type="reset"]:hover {
 
 #otter {
   position: absolute;
-  right: 0;
-  bottom: -30px;
-  width: 45%;
-  max-width: 300px;
+  top: 250px; /* Adjust if needed to align vertically with textarea */
+  left: 72%; /* Position just to the right of .chat-container */
+  transform: translateX(-120px); /* Pull it back into view */
+  width: 400px;
   height: auto;
-  z-index: 0;
+  max-width: 30vw; /* Scales down for very wide screens */
+}
+
+@media screen and (max-width: 1000px) {
+  #otter {
+    position: static;
+    width: 60%;
+    margin: 20px auto 0 auto;
+    transform: none;
+  }
 }
 
 /* Navbar */
@@ -212,12 +222,5 @@ input[type="reset"]:hover {
     position: static;
     transform: none;
     margin: 10px 0;
-  }
-
-  #otter {
-    position: relative;
-    width: 80%;
-    max-width: 250px;
-    margin: 0 auto;
   }
 }
