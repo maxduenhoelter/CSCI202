@@ -1,0 +1,81 @@
+/* Reset some basic styles */
+body, h1, h2, ol, ul, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 40px;
+    line-height: 1.6;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #222;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    color: #444;
+}
+
+/* Lists */
+ol, ul {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #007acc;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+a:hover {
+    color: #005b99;
+    background-color: #e6f2ff;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+/* Container sections */
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* iframe */
+iframe {
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}
